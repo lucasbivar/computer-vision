@@ -20,7 +20,10 @@
 
 ### 📍 Coins Counter
 
-![](https://i.imgur.com/1rdcMa6.gif)
+<img align="center" src="https://i.imgur.com/1rdcMa6.gif">
+
+<br>
+<br>
 
 - 📦 [Script](https://github.com/lucasbivar/computer-vision/blob/main/projects/counting_coins.py)
 
