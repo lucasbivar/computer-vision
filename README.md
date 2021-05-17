@@ -20,7 +20,7 @@
 
 ### 📍 Coins Counter
 
-<img align="center" src="https://i.imgur.com/1rdcMa6.gif">
+<img align="center" src="https://i.imgur.com/TSMfz6v.gif">
 
 <br>
 <br>
