@@ -3,8 +3,8 @@ import imutils
 
 # image = cv2.imread("coins02.png")
 cap = cv2.VideoCapture(0)
-# address = "https://192.168.15.175:8080/video"
-# cap.open(address)
+address = "https://192.168.15.175:8080/video"
+cap.open(address)
 
 while True:
   ret, image = cap.read()
@@ -32,7 +32,7 @@ while True:
       numberOfCoins += 1
 
   print(f"Number of Coins: {numberOfCoins}")
-  cv2.putText(image,f"Number of Coins: {numberOfCoins}", (25, 420), cv2.FONT_HERSHEY_COMPLEX_SMALL, 2, (0, 0, 255))
+  cv2.putText(image,f"Number of Coins: {numberOfCoins}", (25, 420), cv2.FONT_HERSHEY_DUPLEX, 2, (0, 0, 255))
   cv2.imshow("Coins Counter", image)
   if cv2.waitKey(1) & 0xFF == ord('q'):
         break
