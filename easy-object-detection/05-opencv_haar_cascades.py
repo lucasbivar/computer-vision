@@ -1,6 +1,39 @@
 # USAGE
 # python 05-opencv_haar_cascades.py --cascades cascades
 
+# Haar cascades, first introduced by Viola and Jones in their seminal 2001 
+# publication, Rapid Object Detection using a Boosted Cascade of Simple Features, 
+# are arguably OpenCV’s most popular object detection algorithm.
+
+# Sure, many algorithms are more accurate than Haar cascades (HOG + Linear SVM, 
+# SSDs, Faster R-CNN, YOLO, to name a few), but they are still relevant and 
+# useful today.
+
+# One of the primary benefits of Haar cascades is that they are just so fast 
+# — it’s hard to beat their speed.
+
+# The downside to Haar cascades is that they tend to be prone to false-positive 
+# detections, require parameter tuning when being applied for inference/detection, 
+# and just, in general, are not as accurate as the more “modern” algorithms we have today.
+
+# That said, Haar cascades are:
+# 	- An important part of the computer vision and image processing literature
+# 	- Still used with OpenCV
+# 	- Still useful, particularly when working in resource-constrained devices 
+# 		when we cannot afford to use more computationally expensive object detectors
+
+# Problems and limitations of Haar cascades
+# - However, it’s not all good news. The detector tends to be the most effective
+# 	for frontal images of the face.
+# - Haar cascades are notoriously prone to false-positives — the Viola-Jones 
+# 	algorithm can easily report a face in an image when no face is present.
+#	- It can be quite tedious to tune the OpenCV detection parameters. There will 
+# 	be times when we can detect all the faces in an image. There will be other 
+# 	times when (1) regions of an image are falsely classified as faces, and/or 
+# 	(2) faces are missed entirely.
+
+
+
 # import the necessary packages
 import argparse
 import imutils
@@ -95,4 +128,3 @@ while True:
 
 # do a bit of cleanup
 cv2.destroyAllWindows()
-cv2.stop()
