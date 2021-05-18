@@ -2,9 +2,25 @@
 # python 02-single_template_matching.py --image images/coke_bottle.png --template images/coke_logo.png
 # python 02-single_template_matching.py --image images/8_diamonds.png --template images/diamonds_template.png
 
+# template matching isn’t perfect. Despite all the positives, template matching 
+# quickly fails if there are factors of variation in your input images, including 
+# changes to rotation, scale, viewing angle, etc.
+
 # in template matching the orientation of the template and the image must be the same
 # because the algorithm just sweep pixel by pixel
 # Furthermore, the scale must be the same too
+
+# At each (x, y)-location, a metric is calculated to represent how “good” or “bad” the 
+# match is. Typically, we use the normalized correlation coefficient to determine how 
+# “similar” the pixel intensities of the two patches are
+
+# Bright locations of the result matrix R indicate the best matches, where dark regions 
+# indicate there is very little correlation between the source and template images. Notice 
+# how the result matrix’s brightest region appears at the coffee mug’s upper-left corner.
+
+# If your input images contain these types of variations, you should not use template 
+# matching — utilize dedicated object detectors including HOG + Linear SVM, Faster R-CNN, 
+# SSDs, YOLO, etc.
 
 # import the necessary pages
 import argparse
