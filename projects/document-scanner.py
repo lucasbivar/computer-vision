@@ -5,9 +5,8 @@ import numpy as np
 
 FRAME_WIDTH = 480
 FRAME_HEIGHT = 640
-URL = "httpsq://192.168.15.175:8080/video"
 cap = cv2.VideoCapture(0)
-cap.open(URL)
+# cap.open(URL)
 cap.set(3, 640)
 cap.set(4, 480)
 cap.set(10, 150)
